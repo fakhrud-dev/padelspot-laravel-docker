@@ -3,7 +3,6 @@
 namespace App\Livewire;
 
 use App\Enums\BookingStatus;
-use App\Enums\PaymentStatus;
 use App\Models\Booking;
 use App\Models\Court;
 use App\Models\Payment;
@@ -20,8 +19,8 @@ class Dashboard extends Component
         if ($user->isAdmin()) {
             $stats = [
                 'totalBookings' => Booking::count(),
-                'pendingPayments' => Payment::where('status', PaymentStatus::Pending)->count(),
-                'totalRevenue' => Payment::where('status', PaymentStatus::Verified)->sum('amount'),
+                'pendingPayments' => Booking::where('status', BookingStatus::Pending)->count(),
+                'totalRevenue' => Payment::sum('amount'),
                 'totalCourts' => Court::count(),
                 'totalUsers' => User::where('role', 'customer')->count(),
             ];

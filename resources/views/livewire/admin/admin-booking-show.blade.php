@@ -1,6 +1,5 @@
 @php
     use App\Enums\BookingStatus;
-    use App\Enums\PaymentStatus;
 
     $statusLabels = [
         'pending' => 'Menunggu',
@@ -23,7 +22,7 @@
     {{-- Page Header --}}
     <div class="mb-6 flex items-start justify-between gap-4 flex-wrap">
         <div>
-            <p class="text-xs font-bold text-court-blue uppercase tracking-widest mb-1">Admin Panel — Kode Booking
+            <p class="text-xs font-bold text-court-blue uppercase tracking-widest mb-1">Admin Panel - Kode Booking
                 #{{ $booking->id }}</p>
             <h1 class="text-2xl font-extrabold text-gray-900 dark:text-white font-heading">Detail Pemesanan</h1>
         </div>

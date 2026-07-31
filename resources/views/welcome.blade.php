@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="PadelSpot — Platform booking lapangan padel terbaik. Pilih lapangan, tentukan jadwal, dan bermain dengan mudah.">
-    <title>PadelSpot — Game On. Padel Your Way.</title>
+    <meta name="description" content="PadelSpot - Platform booking lapangan padel terbaik. Pilih lapangan, tentukan jadwal, dan bermain dengan mudah.">
+    <title>PadelSpot - Game On. Padel Your Way.</title>
     <link rel="icon" href="/favicon.ico" sizes="any">
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -84,7 +84,7 @@
                 </h1>
 
                 <p class="text-base sm:text-lg text-white/70 max-w-lg leading-relaxed mb-8">
-                    Modern courts, panoramic glass walls, and premium turf — book your favorite court in seconds and play at your best.
+                    Modern courts, panoramic glass walls, and premium turf - book your favorite court in seconds and play at your best.
                 </p>
 
                 <div class="flex flex-wrap items-center gap-4">

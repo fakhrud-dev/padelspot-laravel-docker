@@ -17,7 +17,6 @@ return new class extends Migration
             $table->foreignId('payment_method_id')->constrained()->cascadeOnDelete();
             $table->decimal('amount', 10, 2);
             $table->string('proof_path')->nullable();
-            $table->enum('status', ['pending', 'verified', 'rejected'])->default('pending');
             $table->text('admin_notes')->nullable();
             $table->timestamps();
         });

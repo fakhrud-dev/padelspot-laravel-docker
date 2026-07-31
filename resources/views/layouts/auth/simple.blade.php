@@ -5,7 +5,7 @@
     </head>
     <body class="min-h-screen font-sans antialiased selection:bg-court-blue selection:text-white flex items-center justify-center relative overflow-hidden bg-sand text-gray-900 dark:bg-midnight dark:text-slate-100">
 
-        {{-- Full-bleed background — subtle padel court pattern feel --}}
+        {{-- Full-bleed background - subtle padel court pattern feel --}}
         <div class="absolute inset-0 z-0 bg-gradient-to-br from-court-blue/5 to-transparent dark:from-court-blue/10 dark:to-transparent pointer-events-none"></div>
         <div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-court-blue/5 blur-[120px] dark:bg-ball-yellow/5 pointer-events-none"></div>
         <div class="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full bg-court-blue/5 blur-[120px] dark:bg-court-blue/10 pointer-events-none"></div>

@@ -2,13 +2,12 @@
 
 namespace App\Models;
 
-use App\Enums\PaymentStatus;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-#[Fillable(['booking_id', 'payment_method_id', 'amount', 'proof_path', 'status', 'admin_notes'])]
+#[Fillable(['booking_id', 'payment_method_id', 'amount', 'proof_path', 'admin_notes'])]
 class Payment extends Model
 {
     use HasFactory;
@@ -17,7 +16,6 @@ class Payment extends Model
     {
         return [
             'amount' => 'decimal:2',
-            'status' => PaymentStatus::class,
         ];
     }
 

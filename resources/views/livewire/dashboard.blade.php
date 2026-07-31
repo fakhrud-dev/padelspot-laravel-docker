@@ -1,4 +1,4 @@
-@php use App\Enums\BookingStatus; use App\Enums\PaymentStatus; @endphp
+@php use App\Enums\BookingStatus; @endphp
 
 <div class="page-bg p-6 lg:p-8">
 
@@ -31,7 +31,7 @@
                             Kelola lapangan, booking, dan pantau aktivitas seluruh pemain dengan mudah.
                         @else
                             @if ($stats['activeBookings'] > 0)
-                                Kamu memiliki <span class="font-bold text-white">{{ $stats['activeBookings'] }} booking aktif</span> — jangan sampai terlewat!
+                                Kamu memiliki <span class="font-bold text-white">{{ $stats['activeBookings'] }} booking aktif</span> - jangan sampai terlewat!
                             @else
                                 Belum ada jadwal hari ini. Yuk, booking lapangan sekarang!
                             @endif

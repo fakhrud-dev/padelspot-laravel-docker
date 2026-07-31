@@ -15,7 +15,7 @@
                 <p class="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-1">Total yang harus dibayar</p>
                 <p class="text-3xl font-extrabold text-[var(--color-accent)] font-heading">Rp {{ number_format($booking->total_price, 0, ',', '.') }}</p>
                 <p class="text-sm text-gray-500 dark:text-gray-400 font-medium mt-1.5">
-                    {{ $booking->court->name }} — {{ $booking->booking_date->format('d M Y') }} {{ $booking->timeSlots->pluck('label')->implode(', ') }}
+                    {{ $booking->court->name }} - {{ $booking->booking_date->format('d M Y') }} {{ $booking->timeSlots->pluck('label')->implode(', ') }}
                 </p>
             </div>
 
@@ -47,7 +47,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                         </svg>
                         <span class="text-xs font-bold text-gray-500 dark:text-gray-400">Upload Bukti Transfer / Pembayaran</span>
-                        <span class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">JPG, PNG — Maks. 2MB</span>
+                        <span class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">JPG, PNG - Maks. 2MB</span>
                         <input type="file" wire:model="proof" accept="image/jpeg,image/png" class="hidden">
                     </label>
                     @error('proof') <p class="text-xs text-red-400 mt-1 font-semibold">{{ $message }}</p> @enderror

@@ -74,7 +74,7 @@ class AdminBookingShow extends Component
         $booking = Booking::with(['court', 'timeSlots', 'user', 'payment.paymentMethod', 'statusLogs'])
             ->findOrFail($this->bookingId);
 
-        abort_unless(Auth::user()->isAdmin(), 403);
+    abort_unless(Auth::user()->isAdmin(), 403);
 
         return view('livewire.admin.admin-booking-show', compact('booking'))
             ->layout('layouts.app', ['title' => 'Detail Booking - PadelSpot']);

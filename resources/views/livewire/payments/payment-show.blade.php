@@ -1,11 +1,9 @@
-@php use App\Enums\PaymentStatus; @endphp
-
 <div class="page-bg p-6 lg:p-8">
     <div class="mb-6">
         @if (auth()->user()->isAdmin())
-            <a href="{{ route('admin.payments.index') }}" wire:navigate
+            <a href="{{ route('admin.bookings.show', $payment->booking->id) }}" wire:navigate
                 class="text-sm font-semibold text-court-blue hover:text-gray-900 dark:hover:text-white inline-flex items-center gap-1.5 transition-colors">
-                ← Kembali ke Kelola Pembayaran
+                ← Kembali ke Detail Booking
             </a>
         @else
             <a href="{{ route('bookings.show', $payment->booking->id) }}" wire:navigate
@@ -43,9 +41,7 @@
                 <div class="bg-gray-50 dark:bg-slate-dark/50 rounded-xl p-4 border border-gray-200 dark:border-slate-dark">
                     <p class="text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider">Status</p>
                     <div class="mt-1">
-                        @if ($payment->status === PaymentStatus::Pending)
-                            <span class="badge-pending px-2.5 py-1 text-xs font-bold rounded-full inline-block">Menunggu Verifikasi</span>
-                        @elseif ($payment->status === PaymentStatus::Verified)
+                        @if ($payment->booking->payment)
                             <span class="badge-paid px-2.5 py-1 text-xs font-bold rounded-full inline-block">Terverifikasi</span>
                         @else
                             <span class="badge-cancelled px-2.5 py-1 text-xs font-bold rounded-full inline-block">Ditolak</span>

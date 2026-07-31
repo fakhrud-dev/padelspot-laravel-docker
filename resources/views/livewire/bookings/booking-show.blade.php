@@ -1,4 +1,4 @@
-@php use App\Enums\BookingStatus; use App\Enums\PaymentStatus; @endphp
+@php use App\Enums\BookingStatus; @endphp
 
 <div class="page-bg p-6 lg:p-8">
 
